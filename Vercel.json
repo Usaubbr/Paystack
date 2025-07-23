@@ -1,6 +1,7 @@
-{
-  "version": 2,
-  "routes": [
-    { "src": "/api/paystack", "dest": "/api/paystack.js" }
-  ]
-}
+admin.initializeApp({
+  credential: admin.credential.cert({
+    projectId: "your-project-id", // ✅ Must match Firebase
+    clientEmail: "...",
+    privateKey: "..."
+  })
+});
